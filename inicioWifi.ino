@@ -1,0 +1,6 @@
+
+
+void inicioWiFi(void)
+{
+
+}
