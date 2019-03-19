@@ -136,4 +136,7 @@ C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Rele
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBAPI.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
- C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\SPI\src/SPI.h
+ C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\SPI\src/SPI.h \
+ C:\Users\andre\Documents\Arduino\libraries\OneWire/OneWire.h \
+ C:\Users\andre\Documents\Arduino\libraries\OneWire/util/OneWire_direct_regtype.h \
+ C:\Users\andre\Documents\Arduino\libraries\DallasTemperature/DallasTemperature.h

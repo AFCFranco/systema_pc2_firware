@@ -1,4 +1,4 @@
-//
+	//
 //byte readIMU(int dataToRead) {
 //	digitalWrite(chipSelectPin, LOW);
 //	dataToRead += 128;
@@ -54,33 +54,31 @@ double calcularAngulo(byte CS) {
 	chipSelectPin = CS;
 	int8_t LSB;
 	int8_t HSB;
+	int8_t R;
 	int16_t accel_zOut; 
 	int16_t accel_yOut;
-	if (CS == 29) {
+	if (chipSelectPin == 14 || chipSelectPin == 15 || chipSelectPin == 27 || chipSelectPin == 29) {
+		//acel x 60 - 59 sabana 1
+		//acel y 62 - 61 sabana 3
+
 		LSB = readIMU(62);
-		HSB = readIMU(61);
-		 accel_yOut = (((HSB << 8) & 0xff00) + (LSB & 0x00ff)); //+(HSB&0xff00);
-		LSB = readIMU(62);
-		HSB = readIMU(61);
-		 accel_yOut = (((HSB << 8) & 0xff00) + (LSB & 0x00ff)); //+(HSB&0xff00);
+		HSB = readIMU(61);	
+		
+		accel_yOut = (((HSB << 8) & 0xff00) + (LSB & 0x00ff)); //+(HSB&0xff00);
 	}
-	else if(CS == 27) {
-		LSB = readIMU(62);
-		HSB = readIMU(61);
-		 accel_yOut = (((HSB << 8) & 0xff00) + (LSB & 0x00ff)); //+(HSB&0xff00);
-		LSB = readIMU(62);
-		HSB = readIMU(61);
-		 accel_yOut = (((HSB << 8) & 0xff00) + (LSB & 0x00ff)); //+(HSB&0xff00);
-	}
-	double x = (double)(accel_zOut) / (double)(16900);
+	//SerialUSB.println(accel_yOut);
+	
+	double x = (double)(accel_yOut) / (double)(16900); //convert from adc to gravity
 	double tetha1 = acos(x) * 180 / M_PI;
-	x = (double)(accel_yOut) / (double)(16900);
-	double tetha2 = asin(x) * 180 / M_PI;
-	//SerialUSB.println(accel_zOut);
-	if (!isnan(tetha1) && tetha1 > 45) {
-		return tetha1;
-	}
-	else if (!isnan(tetha2))
-		if (tetha2 > 100)return 0;
-	return  tetha2 - 1;
+	if(CS==CS1)return tetha1;
+	else if (CS == CS2) return tetha1;
+	//x = (double)(accel_yOut) / (double)(16900);
+	//double tetha2 = asin(x) * 180 / M_PI;
+	////SerialUSB.println(accel_zOut);
+	//if (!isnan(tetha1) && tetha1 > 45) {
+	//	return tetha1;
+	//}
+	//else if (!isnan(tetha2))
+	//	if (tetha2 > 100)return 0;
+	//return  tetha2 - 1;
 }

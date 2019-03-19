@@ -1,6 +1,6 @@
-C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Debug\SystemaPC2Firmware.cpp.o: \
- C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Debug\SystemaPC2Firmware.cpp \
- C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/arduino.h \
+C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Debug\OneWire\OneWire.cpp.o: \
+ C:\Users\andre\Documents\Arduino\libraries\OneWire\OneWire.cpp \
+ C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Arduino.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/pgmspace.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/interrupt.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/binary.h \
@@ -118,7 +118,6 @@ C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Debu
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Printable.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/wiring_pulse.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/variant.h \
- C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Arduino.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/UARTClass.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USARTClass.h \
@@ -136,8 +135,6 @@ C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Debu
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBAPI.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
  C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
- C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\libraries\SPI\src/SPI.h \
- C:\Users\andre\Documents\Arduino\libraries\OneWire/OneWire.h \
- C:\Users\andre\Documents\Arduino\libraries\OneWire/util/OneWire_direct_regtype.h \
- C:\Users\andre\Documents\Arduino\libraries\DallasTemperature/DallasTemperature.h \
- c:\program\ files\ (x86)\microsoft\ visual\ studio\2017\community\common7\ide\extensions\rklz3tds.z1r\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h
+ C:\Users\andre\Documents\Arduino\libraries\OneWire\OneWire.h \
+ C:\Users\andre\Documents\Arduino\libraries\OneWire\util/OneWire_direct_regtype.h \
+ C:\Users\andre\Documents\Arduino\libraries\OneWire\util/OneWire_direct_gpio.h
