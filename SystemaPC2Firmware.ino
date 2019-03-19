@@ -17,9 +17,9 @@ MACROS / PIN DEFS
 //************************************************************
 //#define webSocket
 //#define USBWS
-#define USB
+//#define USB
 //#define prueba 
-//#define versensores
+#define versensores
 //**************************************************************
 #define ONE_WIRE_BUS				28
 #define TEMPERATURE_PRECISION		9
