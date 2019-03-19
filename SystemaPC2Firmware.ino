@@ -80,9 +80,9 @@ DeviceAddress Thermometer1, Thermometer2, Thermometer3;
 int sensores[6];
 
 ////Sabana1
-DeviceAddress Thermometer_1 = {40, 255, 100, 29, 3, 155, 157, 11 };
-DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
-DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
+//DeviceAddress Thermometer_1 = {40, 255, 100, 29, 3, 155, 157, 11 };
+//DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
+//DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
 //sabana 2
 //DeviceAddress Thermometer_1 = {40,255,100,29,3,159,128,80};
 //DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
@@ -141,13 +141,13 @@ void setup()
 		digitalWrite(shiftClock, LOW);
 	}
 
-	/*if (!sensors.getAddress(Thermometer1, 0)) SerialUSB.println("Unable to find address for Device 0");
+	if (!sensors.getAddress(Thermometer1, 0)) SerialUSB.println("Unable to find address for Device 0");
 	if (!sensors.getAddress(Thermometer2, 1)) SerialUSB.println("Unable to find address for Device 1");
-	if (!sensors.getAddress(Thermometer3, 2)) SerialUSB.println("Unable to find address for Device 2");*/
+	if (!sensors.getAddress(Thermometer3, 2)) SerialUSB.println("Unable to find address for Device 2");
 
-	sensors.setResolution(Thermometer_1, TEMPERATURE_PRECISION);
-	sensors.setResolution(Thermometer_2, TEMPERATURE_PRECISION);
-	sensors.setResolution(Thermometer_3, TEMPERATURE_PRECISION);
+	sensors.setResolution(Thermometer1, TEMPERATURE_PRECISION);
+	sensors.setResolution(Thermometer2, TEMPERATURE_PRECISION);
+	sensors.setResolution(Thermometer3, TEMPERATURE_PRECISION);
 	//while (true) {
 	//	double angulo1 = calcularAngulo(CS1);
 	//	SerialUSB.println(angulo1);
@@ -164,20 +164,20 @@ void setup()
 			SerialUSB.print((j / 10) % 10);
 			SerialUSB.println(j%10);			
 		}
-		//for (int i = 0; i < 8; i++) {
-		//	SerialUSB.print(Thermometer1[i]);
-		//	SerialUSB.print(",");
-		//}
-		//SerialUSB.println();
-		//for (int i = 0; i < 8; i++) {
-		//	SerialUSB.print(Thermometer2[i]);
-		//	SerialUSB.print(",");
-		//}
-		//SerialUSB.println();
-		//for (int i = 0; i < 8; i++) {
-		//	SerialUSB.print(Thermometer3[i]);
-		//	SerialUSB.print(",");
-		//}
+		for (int i = 0; i < 8; i++) {
+			SerialUSB.print(Thermometer1[i]);
+			SerialUSB.print(",");
+		}
+		SerialUSB.println();
+		for (int i = 0; i < 8; i++) {
+			SerialUSB.print(Thermometer2[i]);
+			SerialUSB.print(",");
+		}
+		SerialUSB.println();
+		for (int i = 0; i < 8; i++) {
+			SerialUSB.print(Thermometer3[i]);
+			SerialUSB.print(",");
+		}
 		SerialUSB.println();		
 	}
 #endif
@@ -401,9 +401,9 @@ void leerSensores() {
 	byte angulo2;
 	byte angulo3;
 	sensors.requestTemperatures();
-	tempC1 = sensors.getTempC(Thermometer_1);
-	tempC2 = sensors.getTempC(Thermometer_2);
-	tempC3 = sensors.getTempC(Thermometer_3);
+	tempC1 = sensors.getTempC(Thermometer1);
+	tempC2 = sensors.getTempC(Thermometer2);
+	tempC3 = sensors.getTempC(Thermometer3);
 	angulo1 = calcularAngulo(CS1);
 	angulo2 = calcularAngulo(CS2);
 	sensores[0] = tempC1;
