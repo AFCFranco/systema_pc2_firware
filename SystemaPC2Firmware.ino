@@ -91,6 +91,10 @@ DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
 //DeviceAddress Thermometer_1 = {40,255,17,90,193,22,4,229};
 //DeviceAddress Thermometer_2 =  {40,255,8,132,181,22,3,140};
 //DeviceAddress Thermometer_3 = { 40,255,218,128,181,22,3,95};
+//sabana 4 the one with w
+//DeviceAddress Thermometer_1 = {40,255,100,29,3,155,139,75};
+//DeviceAddress Thermometer_2 =  {40,255,100,29,3,154,228,171};
+//DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23};
 
 /**********************************************************************************************************
 setup()
