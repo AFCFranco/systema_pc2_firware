@@ -15,11 +15,11 @@ MACROS / PIN DEFS
 #include <DallasTemperature.h>
 #include <math.h>
 //************************************************************
-//#define webSocket
+#define webSocket
 //#define USBWS
 //#define USB
 //#define prueba 
-#define versensores
+//#define versensores
 //**************************************************************
 #define ONE_WIRE_BUS				28
 #define TEMPERATURE_PRECISION		9
@@ -53,7 +53,7 @@ MACROS / PIN DEFS
 #define COLUMN_COUNT              88//88//48//sensor 1
 #define PIN_ADC_INPUT             A1
 
-#define CS1 15
+#define CS1 14//15//
 #define CS2 29
 
 /**********************************************************************************************************
@@ -79,19 +79,20 @@ DallasTemperature sensors(&oneWire);
 DeviceAddress Thermometer1, Thermometer2, Thermometer3;
 int sensores[6];
 
-////Sabana1
-DeviceAddress Thermometer_1 = {40, 255, 100, 29, 3, 155, 157, 11 };
-DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
-DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
-//sabana 2
-//DeviceAddress Thermometer_1 = {40,255,100,29,3,159,128,80};
-//DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
-//DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117 };
-//sabana 3 la del velcro negro
+////Sabana1 
+//DeviceAddress Thermometer_1 = {40, 255, 100, 29, 3, 155, 157, 11 };
+//DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
+//DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
+//sabana 4 chipselect 14
+
+DeviceAddress Thermometer_1 = {40,255,100,29,3,158,75,126};
+DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
+DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
+//sabana 2 la del velcro negro
 //DeviceAddress Thermometer_1 = {40,255,17,90,193,22,4,229};
 //DeviceAddress Thermometer_2 =  {40,255,8,132,181,22,3,140};
 //DeviceAddress Thermometer_3 = { 40,255,218,128,181,22,3,95};
-//sabana 4 the one with w
+//sabana 3 the one with widthest lines
 //DeviceAddress Thermometer_1 = {40,255,100,29,3,155,139,75};
 //DeviceAddress Thermometer_2 =  {40,255,100,29,3,154,228,171};
 //DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23};
