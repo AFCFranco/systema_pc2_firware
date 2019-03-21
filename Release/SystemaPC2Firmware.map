@@ -2663,51 +2663,51 @@ OUTPUT(C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due
  .comment       0x00000000       0x71 C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(interrupt_sam_nvic.o)
  .comment       0x00000000       0x71 C:\Users\andre\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
 
-.debug_info     0x00000000    0x18a13
- .debug_info    0x00000000     0x23b4 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o
- .debug_info    0x000023b4     0x1a73 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SPI\SPI.cpp.o
- .debug_info    0x00003e27     0x15ea C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\OneWire\OneWire.cpp.o
- .debug_info    0x00005411     0x268b C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\DallasTemperature\DallasTemperature.cpp.o
- .debug_info    0x00007a9c     0x1a43 C:\Users\andre\AppData\Local\Temp\VMBCore\visualmicro\edf39ea94a4823db2dafaf834e67dd19\variant\variant.cpp.o
- .debug_info    0x000094df      0x2da C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_info    0x000097b9       0x60 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_info    0x00009819      0x62b C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_info    0x00009e44      0x52f C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_info    0x0000a373     0x1d7e C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_info    0x0000c0f1      0xe00 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_info    0x0000cef1      0x3cf C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_info    0x0000d2c0     0x27cd C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_info    0x0000fa8d      0x3df C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_info    0x0000fe6c      0x1f6 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_info    0x00010062     0x24e3 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_info    0x00012545      0xbe2 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_info    0x00013127      0x220 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_info    0x00013347     0x2f8e C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(CDC.cpp.o)
- .debug_info    0x000162d5     0x209d C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_info    0x00018372      0x6a1 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+.debug_info     0x00000000    0x18a08
+ .debug_info    0x00000000     0x23a9 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o
+ .debug_info    0x000023a9     0x1a73 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SPI\SPI.cpp.o
+ .debug_info    0x00003e1c     0x15ea C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\OneWire\OneWire.cpp.o
+ .debug_info    0x00005406     0x268b C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\DallasTemperature\DallasTemperature.cpp.o
+ .debug_info    0x00007a91     0x1a43 C:\Users\andre\AppData\Local\Temp\VMBCore\visualmicro\edf39ea94a4823db2dafaf834e67dd19\variant\variant.cpp.o
+ .debug_info    0x000094d4      0x2da C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_info    0x000097ae       0x60 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_info    0x0000980e      0x62b C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_info    0x00009e39      0x52f C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_info    0x0000a368     0x1d7e C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_info    0x0000c0e6      0xe00 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_info    0x0000cee6      0x3cf C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_info    0x0000d2b5     0x27cd C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_info    0x0000fa82      0x3df C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_info    0x0000fe61      0x1f6 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_info    0x00010057     0x24e3 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_info    0x0001253a      0xbe2 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_info    0x0001311c      0x220 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_info    0x0001333c     0x2f8e C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(CDC.cpp.o)
+ .debug_info    0x000162ca     0x209d C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_info    0x00018367      0x6a1 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
 
-.debug_abbrev   0x00000000     0x42eb
- .debug_abbrev  0x00000000      0x57c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o
- .debug_abbrev  0x0000057c      0x4e7 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SPI\SPI.cpp.o
- .debug_abbrev  0x00000a63      0x3fd C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\OneWire\OneWire.cpp.o
- .debug_abbrev  0x00000e60      0x435 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\DallasTemperature\DallasTemperature.cpp.o
- .debug_abbrev  0x00001295      0x3fc C:\Users\andre\AppData\Local\Temp\VMBCore\visualmicro\edf39ea94a4823db2dafaf834e67dd19\variant\variant.cpp.o
- .debug_abbrev  0x00001691      0x106 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_abbrev  0x00001797       0x47 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_abbrev  0x000017de      0x19c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_abbrev  0x0000197a      0x160 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_abbrev  0x00001ada      0x2fb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_abbrev  0x00001dd5      0x225 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_abbrev  0x00001ffa      0x196 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_abbrev  0x00002190      0x4e0 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_abbrev  0x00002670      0x14c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_abbrev  0x000027bc      0x175 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_abbrev  0x00002931      0x53e C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_abbrev  0x00002e6f      0x2eb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_abbrev  0x0000315a      0x114 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_abbrev  0x0000326e      0x6f6 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(CDC.cpp.o)
- .debug_abbrev  0x00003964      0x6d3 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_abbrev  0x00004037      0x2b4 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+.debug_abbrev   0x00000000     0x4299
+ .debug_abbrev  0x00000000      0x52a C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o
+ .debug_abbrev  0x0000052a      0x4e7 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SPI\SPI.cpp.o
+ .debug_abbrev  0x00000a11      0x3fd C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\OneWire\OneWire.cpp.o
+ .debug_abbrev  0x00000e0e      0x435 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\DallasTemperature\DallasTemperature.cpp.o
+ .debug_abbrev  0x00001243      0x3fc C:\Users\andre\AppData\Local\Temp\VMBCore\visualmicro\edf39ea94a4823db2dafaf834e67dd19\variant\variant.cpp.o
+ .debug_abbrev  0x0000163f      0x106 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_abbrev  0x00001745       0x47 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_abbrev  0x0000178c      0x19c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_abbrev  0x00001928      0x160 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_abbrev  0x00001a88      0x2fb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_abbrev  0x00001d83      0x225 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_abbrev  0x00001fa8      0x196 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_abbrev  0x0000213e      0x4e0 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_abbrev  0x0000261e      0x14c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_abbrev  0x0000276a      0x175 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_abbrev  0x000028df      0x53e C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_abbrev  0x00002e1d      0x2eb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_abbrev  0x00003108      0x114 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_abbrev  0x0000321c      0x6f6 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(CDC.cpp.o)
+ .debug_abbrev  0x00003912      0x6d3 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_abbrev  0x00003fe5      0x2b4 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
 
 .debug_loc      0x00000000     0x6383
  .debug_loc     0x00000000      0x53c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o
@@ -2795,28 +2795,28 @@ OUTPUT(C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due
  .debug_ranges  0x00000c98      0x248 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USBCore.cpp.o)
  .debug_ranges  0x00000ee0       0xd0 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
 
-.debug_line     0x00000000     0x7486
- .debug_line    0x00000000      0x93a C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o
- .debug_line    0x0000093a      0x8f6 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SPI\SPI.cpp.o
- .debug_line    0x00001230      0x7c1 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\OneWire\OneWire.cpp.o
- .debug_line    0x000019f1      0x94c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\DallasTemperature\DallasTemperature.cpp.o
- .debug_line    0x0000233d      0x62b C:\Users\andre\AppData\Local\Temp\VMBCore\visualmicro\edf39ea94a4823db2dafaf834e67dd19\variant\variant.cpp.o
- .debug_line    0x00002968      0x354 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_line    0x00002cbc       0xb0 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_line    0x00002d6c      0x494 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_line    0x00003200      0x358 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_line    0x00003558      0x5eb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_line    0x00003b43      0x4a5 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_line    0x00003fe8      0x3ce C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_line    0x000043b6      0x70f C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_line    0x00004ac5      0x493 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_line    0x00004f58      0x1d4 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_line    0x0000512c      0x654 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_line    0x00005780      0x4f7 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_line    0x00005c77      0x3e5 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_line    0x0000605c      0x80a C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(CDC.cpp.o)
- .debug_line    0x00006866      0x925 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_line    0x0000718b      0x2fb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+.debug_line     0x00000000     0x7496
+ .debug_line    0x00000000      0x94a C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o
+ .debug_line    0x0000094a      0x8f6 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SPI\SPI.cpp.o
+ .debug_line    0x00001240      0x7c1 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\OneWire\OneWire.cpp.o
+ .debug_line    0x00001a01      0x94c C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\DallasTemperature\DallasTemperature.cpp.o
+ .debug_line    0x0000234d      0x62b C:\Users\andre\AppData\Local\Temp\VMBCore\visualmicro\edf39ea94a4823db2dafaf834e67dd19\variant\variant.cpp.o
+ .debug_line    0x00002978      0x354 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_line    0x00002ccc       0xb0 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_line    0x00002d7c      0x494 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_line    0x00003210      0x358 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_line    0x00003568      0x5eb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_line    0x00003b53      0x4a5 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_line    0x00003ff8      0x3ce C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_line    0x000043c6      0x70f C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_line    0x00004ad5      0x493 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_line    0x00004f68      0x1d4 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_line    0x0000513c      0x654 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_line    0x00005790      0x4f7 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_line    0x00005c87      0x3e5 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_line    0x0000606c      0x80a C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(CDC.cpp.o)
+ .debug_line    0x00006876      0x925 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_line    0x0000719b      0x2fb C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
 
 .debug_str      0x00000000     0x66f1
  .debug_str     0x00000000     0x1a98 C:\Users\andre\AppData\Local\Temp\VMBuilds\SystemaPC2Firmware\arduino_due_x\Release\SystemaPC2Firmware.cpp.o

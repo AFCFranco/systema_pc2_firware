@@ -234,6 +234,7 @@ __attribute__((always_inline)) static __INLINE void __set_PRIMASK(uint32_t priMa
 
 
 #include "SystemaPC2Firmware.ino"
+#include "functions.ino"
 #include "imuFunctions.ino"
 #include "inicioWifi.ino"
 #include "sendCompressed.ino"
