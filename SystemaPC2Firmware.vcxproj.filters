@@ -19,6 +19,7 @@
     <None Include="imuFunctions.ino" />
     <None Include="inicioWifi.ino" />
     <None Include="sendCompressed.ino" />
+    <None Include="functions.ino" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.SystemaPC2Firmware.vsarduino.h">

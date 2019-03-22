@@ -24,6 +24,7 @@ MACROS / PIN DEFS
 #define ONE_WIRE_BUS				28
 #define TEMPERATURE_PRECISION		9
 #define BAUD_RATE                 115200
+
 #define BAUD_RATE1                115200
 //bits to select Rows into the multiplexers
 #define FA			2
