@@ -26,9 +26,9 @@ MACROS / PIN DEFS
 #define BAUD_RATE                 115200
 #define BAUD_RATE1                115200
 //bits to select Rows into the multiplexers
-#define FA			2
-#define FB			3
-#define FC			4
+#define FA							2
+#define FB							3
+#define FC						4
 #define FD			5
 //Pines para manejo de shift register
 #define shiftData	9
@@ -44,16 +44,12 @@ MACROS / PIN DEFS
 #define PACKET_END_BYTE           0xFF
 #define MAX_SEND_VALUE            254  //reserve 255 (0xFF) to mark end of packet
 #define COMPRESSED_ZERO_LIMIT     254
-
-
 #define MIN_SEND_VALUE			15//values below this threshold will be treated and sent as zeros
-
 //the real amount of data send is 94*44. 
 #define ROW_COUNT                 96//94//48
 #define COLUMN_COUNT              88//88//48//sensor 1
 #define PIN_ADC_INPUT             A1
-
-#define CS1 14//15//
+#define CS1 14//
 #define CS2 29
 
 /**********************************************************************************************************
@@ -84,18 +80,17 @@ int sensores[6];
 //DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
 //DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
 //sabana 4 chipselect 14
-
-DeviceAddress Thermometer_1 = {40,255,100,29,3,158,75,126};
-DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
-DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
+//DeviceAddress Thermometer_1 = {40,255,100,29,3,158,75,126};
+//DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
+//DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
 //sabana 2 la del velcro negro
 //DeviceAddress Thermometer_1 = {40,255,17,90,193,22,4,229};
 //DeviceAddress Thermometer_2 =  {40,255,8,132,181,22,3,140};
 //DeviceAddress Thermometer_3 = { 40,255,218,128,181,22,3,95};
 //sabana 3 the one with widthest lines
-//DeviceAddress Thermometer_1 = {40,255,100,29,3,155,139,75};
-//DeviceAddress Thermometer_2 =  {40,255,100,29,3,154,228,171};
-//DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23};
+DeviceAddress Thermometer_1 = {40,255,100,29,3,155,139,75};
+DeviceAddress Thermometer_2 =  {40,255,100,29,3,154,228,171};
+DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23};
 
 /**********************************************************************************************************
 setup()
@@ -122,19 +117,21 @@ void setup()
 	tiempo = millis() + 5000;
 	while (!SerialUSB && tiempo > millis());
 	SerialUSB.println("Starting...");
+	Serial2.setTimeout(5000);
+	//if (Serial2.find("&"))Serial2.write("delay:3000&");
 	//initial pin config
 	for (int i = 2; i <= 13; i++)pinMode(i, OUTPUT);
 	for (int i = 2; i <= 13; i++)digitalWrite(i, 0);
 	pinMode(CHIP_COLM_3, OUTPUT);
 	pinMode(CHIP_COLM_4, OUTPUT);
 	pinMode(CHIP_COLM_5, OUTPUT);
+	pinMode(A7, OUTPUT);
+
 	pinMode(LED, OUTPUT);
 	digitalWrite(CHIP_COLM_3, 0);
 	digitalWrite(CHIP_COLM_4, 0);
 	digitalWrite(CHIP_COLM_5, 0);
 	digitalWrite(LED, HIGH);
-
-
 	pinMode(33, INPUT);
 	digitalWrite(33, HIGH);
 
@@ -142,8 +139,10 @@ void setup()
 	for (int i = 2; i <= 50; i++) {
 		digitalWrite(shiftData, LOW);
 		digitalWrite(shiftClock, HIGH);
+		digitalWrite(A7, HIGH);
 		delay(1);
 		digitalWrite(shiftClock, LOW);
+		digitalWrite(A7, LOW);
 	}
 
 	/*if (!sensors.getAddress(Thermometer1, 0)) SerialUSB.println("Unable to find address for Device 0");
@@ -188,6 +187,8 @@ void setup()
 #endif
 	tiempoOffset = millis();
 	tiempoLed = millis();
+	
+	SerialUSB.println("starting... ");
 }
 
 
@@ -204,6 +205,7 @@ void loop()
 
 #ifdef webSocket
 	while (a != '*') {
+		
 		if ((millis() - tiempoLed) > 5000) {
 			if ((millis() - tiempoLed2) < 500) {
 				digitalWrite(LED, LOW);
@@ -217,7 +219,7 @@ void loop()
 		}
 
 		a = Serial2.read();
-		//if (a != 255)SerialUSB.print(a);
+		if (a != 255)SerialUSB.print(a);
 	}
 	tiempoLed = millis();
 	digitalWrite(LED, HIGH);
@@ -382,13 +384,21 @@ int selectFila()
 	{
 		digitalWrite(shiftData, HIGH);
 		digitalWrite(shiftClock, HIGH);
+		digitalWrite(A7, HIGH);
 		delay(10);
 		digitalWrite(shiftClock, LOW);
+		digitalWrite(A7, LOW);
+
 		digitalWrite(shiftData, LOW);
 		cont_Pos_Fila++;
 	}
 	digitalWrite(shiftClock, HIGH);
+	digitalWrite(A7, HIGH);
+
 	digitalWrite(shiftClock, LOW);
+	digitalWrite(A7, LOW);
+
+
 	digitalWrite(shiftData, LOW);
 	cont_Pos_Fila++;
 	if (cont_Pos_Fila == ROW_COUNT + 1)
