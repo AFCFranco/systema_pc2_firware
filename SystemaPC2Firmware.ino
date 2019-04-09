@@ -14,6 +14,24 @@ MACROS / PIN DEFS
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <math.h>
+//*************************Definir Sábana*************************************
+//es necesrio defenir sabana por que cada una tiene sensores con registros y configuracion distinta
+
+
+//#define IPS_3  
+//#define IPS_2
+
+#define IPS_4
+#define OFFSET_TETHA_IPS4 25
+#define IPS_3
+#define OFFSET_TETHA_IPS3 25
+#define IPS_2
+#define OFFSET_TETHA_IPS2 25
+#define IPS_1
+#define OFFSET_TETHA_IPS1 25
+
+//#define IPS_1
+
 //************************************************************
 #define webSocket
 //#define USBWS
@@ -26,9 +44,9 @@ MACROS / PIN DEFS
 #define BAUD_RATE                 115200
 #define BAUD_RATE1                115200
 //bits to select Rows into the multiplexers
-#define FA							2
-#define FB							3
-#define FC						4
+#define FA			2
+#define FB			3
+#define FC			4
 #define FD			5
 //Pines para manejo de shift register
 #define shiftData	9
@@ -42,15 +60,15 @@ MACROS / PIN DEFS
 #define CHIP_COLM_5					20
 #define LED						  12
 #define PACKET_END_BYTE           0xFF
-#define MAX_SEND_VALUE            254  //reserve 255 (0xFF) to mark end of packet
-#define COMPRESSED_ZERO_LIMIT     254
-#define MIN_SEND_VALUE			15//values below this threshold will be treated and sent as zeros
+#define MAX_SEND_VALUE				254  //reserve 255 (0xFF) to mark end of packet
+#define COMPRESSED_ZERO_LIMIT		254
+#define MIN_SEND_VALUE				15//values below this threshold will be treated and sent as zeros
 //the real amount of data send is 94*44. 
 #define ROW_COUNT                 96//94//48
 #define COLUMN_COUNT              88//88//48//sensor 1
 #define PIN_ADC_INPUT             A1
-#define CS1 14//
-#define CS2 29
+#define CS1							14//
+#define CS2							29
 
 /**********************************************************************************************************
 GLOBALS
@@ -66,7 +84,7 @@ unsigned int offset[ROW_COUNT][COLUMN_COUNT];
 bool setOffset = true;
 unsigned long tiempoOffset = 0;
 unsigned long tiempoLed = 0;
-unsigned long tiempoLed2 = 0;
+unsigned long tiempoLed2 = 0 ;
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature.
@@ -76,21 +94,35 @@ DeviceAddress Thermometer1, Thermometer2, Thermometer3;
 int sensores[6];
 
 ////Sabana1 
-//DeviceAddress Thermometer_1 = {40, 255, 100, 29, 3, 155, 157, 11 };
-//DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
-//DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
+#ifdef IPS_3
+DeviceAddress Thermometer_1 = { 40, 255, 100, 29, 3, 155, 157, 11 };
+DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
+DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
+#endif // IPS_3
+
 //sabana 4 chipselect 14
-//DeviceAddress Thermometer_1 = {40,255,100,29,3,158,75,126};
-//DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
-//DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
+#ifdef IPS_1
+DeviceAddress Thermometer_1 = {40,255,100,29,3,158,75,126};
+DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
+DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
+#endif // IPS_1
+
+
 //sabana 2 la del velcro negro
-//DeviceAddress Thermometer_1 = {40,255,17,90,193,22,4,229};
-//DeviceAddress Thermometer_2 =  {40,255,8,132,181,22,3,140};
-//DeviceAddress Thermometer_3 = { 40,255,218,128,181,22,3,95};
-//sabana 3 the one with widthest lines
-DeviceAddress Thermometer_1 = {40,255,100,29,3,155,139,75};
-DeviceAddress Thermometer_2 =  {40,255,100,29,3,154,228,171};
-DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23};
+#ifdef IPS_2
+DeviceAddress Thermometer_1 = { 40,255,17,90,193,22,4,229 };
+DeviceAddress Thermometer_2 = { 40,255,8,132,181,22,3,140 };
+DeviceAddress Thermometer_3 = { 40,255,218,128,181,22,3,95 };
+#endif // IPS_2
+
+//sabana 3 the one with widthest lines*********
+#ifdef IPS_4
+DeviceAddress Thermometer_1 = { 40,255,100,29,3,155,139,75 };
+DeviceAddress Thermometer_2 = { 40,255,100,29,3,154,228,171 };
+DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23 };
+#endif // IPS_4
+
+
 
 /**********************************************************************************************************
 setup()
@@ -126,7 +158,6 @@ void setup()
 	pinMode(CHIP_COLM_4, OUTPUT);
 	pinMode(CHIP_COLM_5, OUTPUT);
 	pinMode(A7, OUTPUT);
-
 	pinMode(LED, OUTPUT);
 	digitalWrite(CHIP_COLM_3, 0);
 	digitalWrite(CHIP_COLM_4, 0);
