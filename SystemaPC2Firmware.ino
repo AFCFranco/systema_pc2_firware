@@ -16,28 +16,22 @@ MACROS / PIN DEFS
 #include <math.h>
 //*************************Definir Sábana*************************************
 //es necesrio defenir sabana por que cada una tiene sensores con registros y configuracion distinta
-
-
-//#define IPS_3  
-//#define IPS_2
-
-#define IPS_4
-#define OFFSET_TETHA_IPS4 25
-#define IPS_3
-#define OFFSET_TETHA_IPS3 25
-#define IPS_2
-#define OFFSET_TETHA_IPS2 25
-#define IPS_1
-#define OFFSET_TETHA_IPS1 25
-
-//#define IPS_1
-
+//#define IPS3  
+//#define IPS2
+//#define IPS4
+//#define OFFSET_TETHA_IPS4 25
+#define IPS2
+#define OFFSET_TETHA_IPS2 3
+//#define IPS3
+//#define OFFSET_TETHA_IPS3 7
 //************************************************************
+
 #define webSocket
 //#define USBWS
 //#define USB
 //#define prueba 
 //#define versensores
+
 //**************************************************************
 #define ONE_WIRE_BUS				28
 #define TEMPERATURE_PRECISION		9
@@ -93,15 +87,18 @@ DallasTemperature sensors(&oneWire);
 DeviceAddress Thermometer1, Thermometer2, Thermometer3;
 int sensores[6];
 
+
+
+// oneWire temperature sensor address definition**************************************************
 ////Sabana1 
-#ifdef IPS_3
+#ifdef IPS3
 DeviceAddress Thermometer_1 = { 40, 255, 100, 29, 3, 155, 157, 11 };
 DeviceAddress Thermometer_2 = { 40,255,234,149,180,22,5,20 };
 DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
 #endif // IPS_3
 
 //sabana 4 chipselect 14
-#ifdef IPS_1
+#ifdef IPS1
 DeviceAddress Thermometer_1 = {40,255,100,29,3,158,75,126};
 DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
 DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
@@ -109,14 +106,14 @@ DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
 
 
 //sabana 2 la del velcro negro
-#ifdef IPS_2
+#ifdef IPS2
 DeviceAddress Thermometer_1 = { 40,255,17,90,193,22,4,229 };
 DeviceAddress Thermometer_2 = { 40,255,8,132,181,22,3,140 };
 DeviceAddress Thermometer_3 = { 40,255,218,128,181,22,3,95 };
 #endif // IPS_2
 
 //sabana 3 the one with widthest lines*********
-#ifdef IPS_4
+#ifdef IPS4
 DeviceAddress Thermometer_1 = { 40,255,100,29,3,155,139,75 };
 DeviceAddress Thermometer_2 = { 40,255,100,29,3,154,228,171 };
 DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23 };
