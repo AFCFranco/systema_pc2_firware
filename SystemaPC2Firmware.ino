@@ -10,29 +10,39 @@ webSocket and USB can work together
 
 MACROS / PIN DEFS
 **********************************************************************************************************/
+
 #include <SPI.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <math.h>
+
 //*************************Definir Sábana*************************************
-//es necesrio defenir sabana por que cada una tiene sensores con registros y configuracion distinta
-//#define IPS3  
-//#define IPS2
+//******************************************
+//Select here the bedSheet to be connected
+//******************************************
 //#define IPS4
 //#define OFFSET_TETHA_IPS4 25
-#define IPS2
-#define OFFSET_TETHA_IPS2 3
+//#define IPS2
+//#define OFFSET_TETHA_IPS2 3
 //#define IPS3
 //#define OFFSET_TETHA_IPS3 7
-//************************************************************
+#define IPS1
+#define OFFSET_TETHA_IPS1 7
 
+//********************************************************
+//Select the mode you wanna process and transmit the info.
+//********************************************************
 #define webSocket
 //#define USBWS
 //#define USB
 //#define prueba 
 //#define versensores
-
+//*********************************************************
 //**************************************************************
+
+
+
+
 #define ONE_WIRE_BUS				28
 #define TEMPERATURE_PRECISION		9
 #define BAUD_RATE                 115200
