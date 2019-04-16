@@ -1,7 +1,7 @@
 /**********************************************************************************************************
 Project: Flexible sensor matrix
 By: GIBIC GROUP. Andres Castaño and Yovany Ocampo
-LastRev: 6/12/2018
+LastRev: 4/15/2019
 Description: this sketch use arduino Due, multiplexors and shiftRegisters.
 Uncomment #define prueba to test the hardware and leave other options commented.
 To communicate using websocket uncomment #define webSocket
