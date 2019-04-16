@@ -11,7 +11,7 @@ webSocket and USB can work together
 MACROS / PIN DEFS
 **********************************************************************************************************/
 
-//#include <SPI.h>
+#include <SPI.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <math.h>
