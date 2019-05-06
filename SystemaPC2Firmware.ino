@@ -23,11 +23,11 @@ MACROS / PIN DEFS
 //#define IPS4
 //#define OFFSET_TETHA_IPS4 25
 //#define IPS2
-//#define OFFSET_TETHA_IPS2 3
-//#define IPS3
-//#define OFFSET_TETHA_IPS3 7
-#define IPS1
-#define OFFSET_TETHA_IPS1 7
+//#define OFFSET_TETHA_IPS2 -7
+#define IPS3
+#define OFFSET_TETHA_IPS3 2
+//#define IPS1
+//#define OFFSET_TETHA_IPS1 15
 
 //********************************************************
 //Select the mode you wanna process and transmit the info.
@@ -62,8 +62,8 @@ MACROS / PIN DEFS
 #define CHIP_COLM_3					45
 #define CHIP_COLM_4					21
 #define CHIP_COLM_5					20
-#define LED						  12
-#define PACKET_END_BYTE           0xFF
+#define LED							12
+#define PACKET_END_BYTE				0xFF
 #define MAX_SEND_VALUE				254  //reserve 255 (0xFF) to mark end of packet
 #define COMPRESSED_ZERO_LIMIT		254
 #define MIN_SEND_VALUE				15//values below this threshold will be treated and sent as zeros
@@ -71,8 +71,23 @@ MACROS / PIN DEFS
 #define ROW_COUNT                 96//94//48
 #define COLUMN_COUNT              88//88//48//sensor 1
 #define PIN_ADC_INPUT             A1
-#define CS1							14//
-#define CS2							29
+
+#ifdef IPS1
+	#define CS1							14
+	#define CS2							29
+#endif // IPS1
+#ifdef IPS2
+	#define CS1							15
+	#define CS2							29
+#endif // IPS1
+#ifdef IPS3
+	#define CS1							14
+	#define CS2							29
+#endif // IPS1
+#ifdef IPS4
+	#define CS1							14
+	#define CS2							29
+#endif // IPS1
 
 /**********************************************************************************************************
 GLOBALS
@@ -88,7 +103,7 @@ unsigned int offset[ROW_COUNT][COLUMN_COUNT];
 bool setOffset = true;
 unsigned long tiempoOffset = 0;
 unsigned long tiempoLed = 0;
-unsigned long tiempoLed2 = 0 ;
+unsigned long tiempoLed2 = 0;
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature.
@@ -109,9 +124,9 @@ DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,67,67 };
 
 //sabana 4 chipselect 14
 #ifdef IPS1
-DeviceAddress Thermometer_1 = {40,255,100,29,3,158,75,126};
-DeviceAddress Thermometer_2 =  {40,255,100,29,3,152,147,65};
-DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117};
+DeviceAddress Thermometer_1 = { 40,255,100,29,3,158,75,126 };
+DeviceAddress Thermometer_2 = { 40,255,100,29,3,152,147,65 };
+DeviceAddress Thermometer_3 = { 40,255,100,29,3,152,117,117 };
 #endif // IPS_1
 
 
@@ -135,7 +150,7 @@ DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23 };
 setup()
 **********************************************************************************************************/
 void setup()
-{	
+{
 	//imu initial configurations
 	SPI.begin();
 	SPI.beginTransaction(SPISettings(10000, MSBFIRST, SPI_MODE3));
@@ -196,15 +211,15 @@ void setup()
 	//	delay(200);
 	//}
 #ifdef versensores
-	while (true) {	
-		leerSensores();	
+	while (true) {
+		leerSensores();
 		int j;
 		for (int i = 0; i < 6; i++) {
 			j = sensores[i];
 			SerialUSB.println(j);
 			SerialUSB.print(j / 100);
 			SerialUSB.print((j / 10) % 10);
-			SerialUSB.println(j%10);			
+			SerialUSB.println(j % 10);
 		}
 		//for (int i = 0; i < 8; i++) {
 		//	SerialUSB.print(Thermometer1[i]);
@@ -220,12 +235,12 @@ void setup()
 		//	SerialUSB.print(Thermometer3[i]);
 		//	SerialUSB.print(",");
 		//}
-		SerialUSB.println();		
+		SerialUSB.println();
 	}
 #endif
 	tiempoOffset = millis();
 	tiempoLed = millis();
-	
+
 	SerialUSB.println("starting... ");
 }
 
@@ -243,7 +258,7 @@ void loop()
 
 #ifdef webSocket
 	while (a != '*') {
-		
+
 		if ((millis() - tiempoLed) > 5000) {
 			if ((millis() - tiempoLed2) < 500) {
 				digitalWrite(LED, LOW);
@@ -279,13 +294,13 @@ void loop()
 		SerialUSB.print(j);
 		SerialUSB.print(" ");
 		k = j / 100;
-		Serial2.write(k+48);
+		Serial2.write(k + 48);
 		SerialUSB.print(k);
 		k = (j / 10) % 10;
-		Serial2.write(k+48);
+		Serial2.write(k + 48);
 		SerialUSB.print(k);
 		k = j % 10;
-		Serial2.write(k+48);
+		Serial2.write(k + 48);
 		SerialUSB.println(k);
 	}
 #endif

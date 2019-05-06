@@ -34,12 +34,12 @@ double calcularAngulo(byte CS) {
 		HSB = readIMU(59);
 #endif
 #ifdef IPS2
-		LSB = readIMU(62);
-		HSB = readIMU(61);
+		LSB = readIMU(60);
+		HSB = readIMU(59);
 #endif
 #ifdef IPS3
-		LSB = readIMU(62);
-		HSB = readIMU(61);
+		LSB = readIMU(60);
+		HSB = readIMU(59);
 #endif
 #ifdef IPS1
 		LSB = readIMU(60);
@@ -54,13 +54,13 @@ double calcularAngulo(byte CS) {
 	double tetha1 = -(asin(x) * 180 / M_PI - OFFSET_TETHA_IPS4);
 #endif
 #ifdef IPS2
-	double tetha1 = -(asin(x) * 180 / M_PI - OFFSET_TETHA_IPS2);
+	double tetha1 = (asin(-x) * 180 / M_PI - OFFSET_TETHA_IPS2);
 #endif
 #ifdef IPS3
 	double tetha1 = -(asin(x) * 180 / M_PI - OFFSET_TETHA_IPS3);
 #endif
 #ifdef IPS1
-	double tetha1 = (asin(x) * 180 / M_PI + OFFSET_TETHA_IPS1);
+	double tetha1 = -(asin(x) * 180 / M_PI + OFFSET_TETHA_IPS1);
 #endif
 	if (CS == CS1)return tetha1;
 	else if (CS == CS2) return tetha1;
