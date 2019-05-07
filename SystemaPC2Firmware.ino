@@ -21,13 +21,13 @@ MACROS / PIN DEFS
 //Select here the bedSheet to be connected
 //******************************************
 //#define IPS4
-//#define OFFSET_TETHA_IPS4 25
+//#define OFFSET_TETHA_IPS4 10
 //#define IPS2
 //#define OFFSET_TETHA_IPS2 -7
-#define IPS3
-#define OFFSET_TETHA_IPS3 2
-//#define IPS1
-//#define OFFSET_TETHA_IPS1 15
+//#define IPS3
+//#define OFFSET_TETHA_IPS3 2
+#define IPS1
+#define OFFSET_TETHA_IPS1 15
 
 //********************************************************
 //Select the mode you wanna process and transmit the info.
@@ -48,13 +48,13 @@ MACROS / PIN DEFS
 #define BAUD_RATE                 115200
 #define BAUD_RATE1                115200
 //bits to select Rows into the multiplexers
-#define FA			2
-#define FB			3
-#define FC			4
-#define FD			5
+#define FA							2
+#define FB							3
+#define FC							4
+#define FD							5
 //Pines para manejo de shift register
-#define shiftData	9
-#define shiftClock	8
+#define shiftData					9
+#define shiftClock					8
 //bits to enable multplexers
 #define CHIP_COLM_0					6//5
 #define CHIP_COLM_1					7//6
@@ -68,9 +68,9 @@ MACROS / PIN DEFS
 #define COMPRESSED_ZERO_LIMIT		254
 #define MIN_SEND_VALUE				15//values below this threshold will be treated and sent as zeros
 //the real amount of data send is 94*44. 
-#define ROW_COUNT                 96//94//48
-#define COLUMN_COUNT              88//88//48//sensor 1
-#define PIN_ADC_INPUT             A1
+#define ROW_COUNT					96//94//48
+#define COLUMN_COUNT				88//88//48//sensor 1
+#define PIN_ADC_INPUT				A1
 
 #ifdef IPS1
 	#define CS1							14
@@ -139,8 +139,8 @@ DeviceAddress Thermometer_3 = { 40,255,218,128,181,22,3,95 };
 
 //sabana 3 the one with widthest lines*********
 #ifdef IPS4
-DeviceAddress Thermometer_1 = { 40,255,100,29,3,155,139,75 };
-DeviceAddress Thermometer_2 = { 40,255,100,29,3,154,228,171 };
+DeviceAddress Thermometer_1 = { 40,255,100,29,3,154,228,171};
+DeviceAddress Thermometer_2 = {40,255,100,29,3,155,139,75 };
 DeviceAddress Thermometer_3 = { 40,255,100,29,3,155,184,23 };
 #endif // IPS_4
 
@@ -343,12 +343,10 @@ void loop()
 #endif // prueba
 #ifndef prueba
 			unsigned long raw_reading = 0;
-			delayMicroseconds(10);
+			delayMicroseconds(10);			
 			raw_reading = analogRead(PIN_ADC_INPUT);
 			raw_reading >> 4;
-
-
-
+			if (j < 3 || j>41)raw_reading = 0;			
 			if (setOffset == true && (millis() - tiempoOffset) < 6000 && (millis() - tiempoOffset) > 2000) {
 				offset[i][j] = max(offset[i][j], raw_reading);
 			}
@@ -358,8 +356,6 @@ void loop()
 			long temporal = (long)(raw_reading - offset[i][j]);
 			if (temporal < 0)temporal = 0;
 			raw_reading = temporal;
-
-
 			/*if (setOffset == true && (millis() - tiempoOffset) < 6000 && (millis() - tiempoOffset) > 2000) {
 				offset[i][j] = max(offset[i][j], raw_reading);
 			}
